@@ -1,0 +1,26 @@
+{
+  "name": "crud-maker",
+  "version": "0.0.1",
+  "description": "CRUD maker for vue3",
+  "main": "bin/index.js",
+  "scripts": {
+    "start": "tsc-watch --onSuccess \"node .\""
+  },
+  "author": "Kashchavtsev Denis",
+  "license": "Apache-2.0",
+  "bin": {
+    "crud": "./bin/index.js"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.48.1",
+    "@typescript-eslint/parser": "^5.48.1",
+    "eslint": "^8.31.0",
+    "tsc-watch": "^6.0.0",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "arg": "^5.0.2",
+    "fs-extra": "^11.1.0",
+    "inquirer": "^9.1.4"
+  }
+}
