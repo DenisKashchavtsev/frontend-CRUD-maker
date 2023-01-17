@@ -1,6 +1,9 @@
-export class Select implements Field {
+import {IField} from "./ifield";
+import {IOption} from "./option";
+
+export class Select implements IField {
     public name: string;
-    public options: Array<Option>;
+    public options: Array<IOption> = [];
 
     /**
      * @param name
@@ -12,8 +15,7 @@ export class Select implements Field {
     /**
      * @param option
      */
-    public addOption(option: Option)
-    {
+    public addOption(option: IOption) {
         this.options.push(option);
     }
 }

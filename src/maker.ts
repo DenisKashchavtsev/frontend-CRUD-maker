@@ -1,38 +1,19 @@
 import fs from 'fs-extra'
-import * as inquirer from 'inquirer';
 import {Entity} from "./entity";
+import {Console} from "./console";
 
 export class Maker {
     private entity: Entity;
 
     constructor() {
-        this.entity = new Entity();
+        this.entity = new Console().getEntity();
         this.getTemplates()
     }
 
-    private getTemplates()
-    {
+    private getTemplates() {
         try {
             const files = fs.readdirSync('./templates', 'utf8', '');
-            console.log(files);
-
         } catch (e) {
-            console.log(e);
         }
-    }
-
-    private build()
-    {
-        inquirer.prompt([
-                {
-                    name: 'crud name',
-                    message: 'Message crud name',
-                    default: 'product'
-                },
-            ])
-            .then(answer => {
-                console.log(answer)
-                this.entity.setName(answer)
-            });
     }
 }

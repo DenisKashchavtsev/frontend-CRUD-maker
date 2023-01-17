@@ -1,4 +1,6 @@
-export class InputType implements Field {
+import {IField} from "./ifield";
+
+export class InputType implements IField {
     public name: string;
     public placeholder: string;
 
